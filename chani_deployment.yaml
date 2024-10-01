@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: s3-list
+  annotations:
+    serviceAccountName: chanisa			
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: s3-list
+  template:
+    metadata:
+      labels:
+        app: s3-list
+    spec:
+      serviceAccountName: chanisa		
+      containers:
+      - name: s3-list
+        image: kodatichanikya/chani:aws5
+        env:
+        - name: S3_BUCKET_NAME
+          value: "lists3objects"  # Replace with your S3 bucket name
+      
+
