@@ -27,6 +27,8 @@ data "aws_ecrpublic_authorization_token" "token" {
   provider = aws.virginia
 }
 
+####locals
+
 locals {
   name   = "karpentercluster"
   region = "us-east-1"
