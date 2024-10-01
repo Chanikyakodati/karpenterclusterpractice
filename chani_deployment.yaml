@@ -20,6 +20,6 @@ spec:
         image: kodatichanikya/chani:aws5
         env:
         - name: S3_BUCKET_NAME
-          value: "lists3objects"  # Replace with your S3 bucket name
+          value: "lists3objects"  #  Replace with your S3 bucket name
       
 
