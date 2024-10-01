@@ -24,13 +24,6 @@ provider "aws" {
  # secret_key = "my-secret-key"
 }
 
-variable "AWS_SECRET_ACCESS_KEY" {
-  default = ""
-}
-
-variable "AWS_ACCESS_KEY_ID" {
-  default = ""
-}
 
 data "aws_availability_zones" "available" {}
 data "aws_ecrpublic_authorization_token" "token" {
